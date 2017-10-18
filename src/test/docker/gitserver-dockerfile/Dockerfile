@@ -1,4 +1,4 @@
-FROM gogs/gogs:0.11.4
+FROM gogs/gogs:0.11.29
 
 ARG FIRST_USER=dev
 
@@ -11,3 +11,5 @@ RUN echo 'sed "s#ROOT_URL.*=.*#ROOT_URL=${EXTERNAL_URL}#g" /etc/templates/app.in
   && bash /app/setup-gogs.sh
 
 VOLUME "/app/data"
+
+#Gogs 0.11.29.0727 and Jenkins 2.84
